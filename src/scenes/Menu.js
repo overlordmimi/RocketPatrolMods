@@ -15,7 +15,11 @@ class Menu extends Phaser.Scene {
         let menuConfig = {
             fontFamily: 'Courier',
             fontSize: '28px',
+<<<<<<< HEAD
             backgroundColor: '#edabc8',
+=======
+            backgroundColor: '#F3B141',
+>>>>>>> 5957ebb1d63345583f7318e2a3cd57dbdc93fc5e
             color: '#843605',
             align: 'right',
             padding: {
@@ -26,11 +30,19 @@ class Menu extends Phaser.Scene {
         }
         
         // show menu text
+<<<<<<< HEAD
         this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'FLOWER BLOOM', menuConfig).setOrigin(0.5);
         this.add.text(game.config.width/2, game.config.height/2, 'Use ←→ arrows to move & (F) to water', menuConfig).setOrigin(0.5);
         menuConfig.backgroundColor = '#6c854c';
         menuConfig.color = '#edabc8';
         this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, 'Press ← or → to play', menuConfig).setOrigin(0.5);
+=======
+        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'ROCKET PATROL', menuConfig).setOrigin(0.5);
+        this.add.text(game.config.width/2, game.config.height/2, 'Use ←→ arrows to move & (F) to fire', menuConfig).setOrigin(0.5);
+        menuConfig.backgroundColor = '#00FF00';
+        menuConfig.color = '#000';
+        this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, 'Press ← for Novice or → for Expert', menuConfig).setOrigin(0.5);
+>>>>>>> 5957ebb1d63345583f7318e2a3cd57dbdc93fc5e
 
         // define keys
         keyLEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
@@ -41,7 +53,11 @@ class Menu extends Phaser.Scene {
         if (Phaser.Input.Keyboard.JustDown(keyLEFT)) {
           // Novice mode
           game.settings = {
+<<<<<<< HEAD
             spaceshipSpeed: 1,
+=======
+            spaceshipSpeed: 3,
+>>>>>>> 5957ebb1d63345583f7318e2a3cd57dbdc93fc5e
             gameTimer: 60000    
           }
           this.sound.play('sfx_select');

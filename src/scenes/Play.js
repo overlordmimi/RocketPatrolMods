@@ -12,10 +12,13 @@ class Play extends Phaser.Scene {
 
         // load spritesheet
         this.load.spritesheet('explosion', './assets/explosion.png', {frameWidth: 64, frameHeight: 32, startFrame: 0, endFrame: 9});
+<<<<<<< HEAD
         this.load.spritesheet('explosions', './assets/explosions.png', {frameWidth: 64, frameHeight: 32, startFrame: 0, endFrame: 9});
 
         //load music 
         this.load.audio('bg_music', './assets/bg.wav');
+=======
+>>>>>>> 5957ebb1d63345583f7318e2a3cd57dbdc93fc5e
     }
 
     create() {
@@ -54,6 +57,7 @@ class Play extends Phaser.Scene {
             frameRate: 30
         });
 
+<<<<<<< HEAD
         // animation config
         this.anims.create({
             key: 'explode2',
@@ -61,6 +65,8 @@ class Play extends Phaser.Scene {
             frameRate: 30
         });
 
+=======
+>>>>>>> 5957ebb1d63345583f7318e2a3cd57dbdc93fc5e
         // initialize score
         this.p1Score = 0;
 
@@ -68,8 +74,13 @@ class Play extends Phaser.Scene {
         let scoreConfig = {
             fontFamily: 'Courier',
             fontSize: '28px',
+<<<<<<< HEAD
             backgroundColor: '#dcedc5',
             color: '#edabc8',
+=======
+            backgroundColor: '#F3B141',
+            color: '#843605',
+>>>>>>> 5957ebb1d63345583f7318e2a3cd57dbdc93fc5e
             align: 'right',
             padding: {
             top: 5,
@@ -88,7 +99,10 @@ class Play extends Phaser.Scene {
             this.add.text(game.config.width/2, game.config.height/2, 'GAME OVER', scoreConfig).setOrigin(0.5);
             this.add.text(game.config.width/2, game.config.height/2 + 64, 'Press (R) to Restart', scoreConfig).setOrigin(0.5);
             this.gameOver = true;
+<<<<<<< HEAD
             bgm.stop();
+=======
+>>>>>>> 5957ebb1d63345583f7318e2a3cd57dbdc93fc5e
         }, null, this);
     }
 
@@ -107,17 +121,26 @@ class Play extends Phaser.Scene {
         // check collisions
         if(this.checkCollision(this.p1Rocket, this.ship03)) {
             this.shipExplode(this.ship03);
+<<<<<<< HEAD
             this.clock.delay += (1) * 1000;
+=======
+>>>>>>> 5957ebb1d63345583f7318e2a3cd57dbdc93fc5e
             this.p1Rocket.reset();
         }
         if (this.checkCollision(this.p1Rocket, this.ship02)) {
             this.shipExplode(this.ship02);
+<<<<<<< HEAD
             this.clock.delay += (1) * 1000;
+=======
+>>>>>>> 5957ebb1d63345583f7318e2a3cd57dbdc93fc5e
             this.p1Rocket.reset();
         }
         if (this.checkCollision(this.p1Rocket, this.ship01)) {
             this.shipExplode(this.ship01);
+<<<<<<< HEAD
             this.clock.delay += (5) * 1000;
+=======
+>>>>>>> 5957ebb1d63345583f7318e2a3cd57dbdc93fc5e
             this.p1Rocket.reset();
         }
 
@@ -147,6 +170,7 @@ class Play extends Phaser.Scene {
         ship.alpha = 0;
         // create explosion sprite at ship's position
         let boom = this.add.sprite(ship.x, ship.y, 'explosion').setOrigin(0, 0);
+<<<<<<< HEAD
         if(ship.points == 100){
 
             boom.anims.play('explode2'); 
@@ -155,11 +179,18 @@ class Play extends Phaser.Scene {
 
             boom.anims.play('explode'); 
         }            // play explode animation
+=======
+        boom.anims.play('explode');             // play explode animation
+>>>>>>> 5957ebb1d63345583f7318e2a3cd57dbdc93fc5e
         boom.on('animationcomplete', () => {    // callback after anim completes
           ship.reset();                         // reset ship position
           ship.alpha = 1;                       // make ship visible again
           boom.destroy();                       // remove explosion sprite
+<<<<<<< HEAD
         });   
+=======
+        });     
+>>>>>>> 5957ebb1d63345583f7318e2a3cd57dbdc93fc5e
          // score add and repaint
         this.p1Score += ship.points;
         this.scoreLeft.text = this.p1Score;  
